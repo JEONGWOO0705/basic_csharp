@@ -142,7 +142,7 @@
     - 인터페이스에서 약속한 메서드를 구현하지 않으면 빌드 안됨!
     - 추상클래스를 단순화 시키면 인터페이스
 
-    ![인터페이스](https://github.com/JEONGWOO0705/basic_csharp_2024/blob/main/images/cs001.png?raw=true)
+    ![인터페이스](https://raw.githubusercontent.com/JEONGWOO0705/basic_csharp_2024/main/images/cs001.png)
 
 - 추상클래스(abstract)
     - Virtual 메서드하고도 유사
