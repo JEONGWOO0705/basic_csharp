@@ -200,6 +200,7 @@
     - 메서드 호출 시 매개변수 전달
     - 대리자 호출 시 함수(메서드) 자체를 전달
     - 이벤트 - 컴퓨터 내에서 발생하는 객체의 사건들
+    - 익명 메서드 사용
     - delegate --> event
     - 윈폼개발 --> 이벤트 기반(Event driven) 프로그래밍
 
@@ -210,10 +211,45 @@
 
 ## 3일차
 - 람다식 
-- LINQ 
+    - 익명 메서드를 만드는 방식 중에 하나 
+        1. Delegate
+        2. Lambda expression
+    - 익명 메서드시 코딩량을 줄어듬, 프로퍼티 사용시에도 코딩량이 줄어듬
+    - 익명 메서드 사용시 마다 대리자를 선언해야하기 때문에
+        - Func, Action을 MS에서 미리 만들어둠
+- LINQ (Language Intergrated Query)
+    - C#에 통합된 데이터 질의 기능(DB SQL과 거의 동일)
+    - group by 에 집계함수가 필수가 아닌 것 외에는 SQL과 동일
+    - 단, 키워드 사용 순서가 다른 것을 인지하고 있어야함
+    - LINQ만 고집하면 안됨. 기존의 C# 로직을 사용해야할 경우도 있음
+
 - 애트리뷰트
+    - [obsolete("다음 버전 사용 불가!")]
+- 리플렉션
+    - object.Gettypte(); 
 - 파이썬 실행
+    - COM 객체 사용(dynamic 형식)
+    - IronPython 라이브러리 : Python 을 C#에서 사용할 수 있도록 해주는 오픈소스 라이브러리
+    - NuGet Package : 파이썬의 pip 같은 라이브러리 관리 툴
+    - 해당 프로젝트 종속성 마우스 오른쪽버튼 -> NuGet 패키지 관리
+        1. 파이썬 엔진, 스코프, 설정 경로 생성
+        2. 해당 컴퓨터 파이썬 경로들 설정
+        3. 실행시킬 파이썬 파일의 경로 지정
+        4. 파이썬 실행 (scope' 연결)
+        5. 파이썬 함수를 Func 또는 Action으로 매핑
+        6. 매핑시킨 매서드를 실행
+
+- 가비지 컬렉션
+    - C, C++은 메모리 사용시 개발자가 직접 메모리 해제 해야함
+    - C#, Python, Java  등의 객체 지향 언어는 Garabge Collection() 기능으로 프로그램이 직접 관리한다.
+    - C#개발자는 메모리 관리에 아무것도 할 게 없다!!
+
 - Winform UI 개발 + 파일, 스레드
+    - 이벤트, 이벤트 핸들러(대리자, 이벤트 연결)
+    - 그래픽 사용자 인터페이스를 만드는 방법
+        1. Windows Forms
+        2. WPF(Windows Presentation Foundation)
+    - WYSIWYG(What You See Is What You Get) 방식의 GUI 프로그램 개발
 - 가비지 컬렉션
 
 ## 4일차
