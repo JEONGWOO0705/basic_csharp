@@ -250,8 +250,33 @@
         1. Windows Forms
         2. WPF(Windows Presentation Foundation)
     - WYSIWYG(What You See Is What You Get) 방식의 GUI 프로그램 개발
-- 가비지 컬렉션
+
 
 ## 4일차
+- 윈폼 UI 개발
+    - Winforms로 윈폼 개발 학습
+    - 컨트롤 Prefix
+        - ComboBox : Cbo-
+        - CheckBox : Chk-
+        - RadioButtion : Rdo-
+        - TextBox : Txt
+        - Button : Btn-
+        - TrackBar : Trb-
+        - ProgressBar : Prg-
+        - TreeView : Trv-
+        - ListView : Lsv-
+        - PictureBox : Pic-
+        - *Dialog : Dlg-
 - WPF
 - 예제 프로젝트
+
+## 5일차
+- 윈폼 UI개발 (계속)
+    - 스레드
+    - 파일 입출력
+    - 비동기 작업 앱
+    - 윈도우 탐색기 앱
+    - 도서관리 앱 with SQL Server
+    - ModernUI 앱
+    - 국가교통정보센터 CCTV 뷰 앱
+    - IoT Dummy 앱 with SQL Server
