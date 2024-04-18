@@ -296,15 +296,26 @@
     - IoT Dummy 앱 with SQL Server
 
 ## 6일차
-- 예제 프로젝트
-    - 윈도우 탐색기 앱
-    - 도서관리 앱 with SQL Server
-    - ModernUI 앱
-    - 국가교통정보센터 CCTV 뷰 앱
-    - IoT Dummy 앱 with SQL Server
+- 토이 프로젝트
+    - 윈도우 탐색기 앱 (컨트롤 학습)
+        - MtExplorer 프로젝트 생성
+        - 아이콘 검색, png 2 ico  구글링 웹사이트
+        - 트리뷰, 리스트뷰 기능 추가
 
-## 개인 포트폴리오
-- 할 것
+        ![중간결과](https://raw.githubusercontent.com/JEONGWOO0705/basic_csharp_2024/main/images/cs005.png)
+
+        - 미적용 : 컨텍스트 메뉴 보기 기능, 더블클릭 실행,...
+
+## 7일차
+- 토이 프로젝트
+    - 윈도우 탐색기 앱 종료
+    - ModernUI 앱 (디자인)
+    - 도서관리 앱 with SQL Server (Base, Major)
+    - 국가교통정보센터 CCTV 뷰 앱   (OpenAPI, NuGet dll, NetWork)
+    - IoT Dummy 앱 with SQL Server (IoT, DB)
+
+## 개인 토이 프로젝트 
+- 할 것 (헬스 타이머 및 운동 도우미)
     - 기능..
     - 특징
     - 배운점
