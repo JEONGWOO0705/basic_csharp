@@ -317,8 +317,10 @@
 ## 개인 토이 프로젝트 
 - 할 것 (헬스 타이머 및 운동 도우미)
     - 기능
-        - 부위별 운동 추천
+        - 부위별 운동 추천 (랜덤 추천)
         - 운동 타이머
         - 운동 기록
     - 특징
     - 배운점
+
+    ![1일차](https://raw.githubusercontent.com/JEONGWOO0705/basic_csharp_2024/main/images/cs006.gif)
