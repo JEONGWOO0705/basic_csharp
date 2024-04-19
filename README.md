@@ -322,5 +322,6 @@
         - 운동 기록
     - 특징
     - 배운점
+    - 1일차 
 
     ![1일차](https://raw.githubusercontent.com/JEONGWOO0705/basic_csharp_2024/main/images/cs006.gif)
