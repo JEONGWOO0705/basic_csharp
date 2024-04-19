@@ -311,7 +311,11 @@
     - 윈도우 탐색기 앱 종료
         - 실행 결과
 
-        https://raw.githubusercontent.com/JEONGWOO0705/basic_csharp_2024/main/images/cs007.mp4
+
+        https://github.com/JEONGWOO0705/basic_csharp_2024/assets/84116251/11d6cf14-d80d-4b7e-a157-f7874d0e7c51
+
+
+       
         
     - ModernUI 앱 (디자인)
     - 도서관리 앱 with SQL Server (Base) ModernUI (NuGet패키지)
@@ -333,4 +337,8 @@
 
 - 1일차 
 
-    ![1일차](https://raw.githubusercontent.com/JEONGWOO0705/basic_csharp_2024/main/images/cs006.gif)
+    
+
+    https://github.com/JEONGWOO0705/basic_csharp_2024/assets/84116251/6f204e84-fdf1-4652-9d74-200c84f96c3f
+
+
