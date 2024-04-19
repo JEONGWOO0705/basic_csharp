@@ -304,15 +304,23 @@
 
         ![중간결과](https://raw.githubusercontent.com/JEONGWOO0705/basic_csharp_2024/main/images/cs005.png)
 
-        - 미적용 : 컨텍스트 메뉴 보기 기능, 더블클릭 실행,...
+        - 미적용 : 컨텍스트 메뉴 리스트뷰 보기 기능, 더블클릭 실행,...
 
 ## 7일차
 - 토이 프로젝트
     - 윈도우 탐색기 앱 종료
+        - 실행 결과
+
+
+        
     - ModernUI 앱 (디자인)
-    - 도서관리 앱 with SQL Server (Base, Major)
-    - 국가교통정보센터 CCTV 뷰 앱   (OpenAPI, NuGet dll, NetWork)
+    - 도서관리 앱 with SQL Server (Base) ModernUI (NuGet패키지)
+
+## 8일차
+- 토이 프로젝트
+    - 도서관리 앱 종료
     - IoT Dummy 앱 with SQL Server (IoT, DB)
+    - 국가교통정보센터 CCTV 뷰 앱   (OpenAPI, NuGet dll, NetWork, UI디자인, 비동기 메서드)
 
 ## 개인 토이 프로젝트 
 - 할 것 (헬스 타이머 및 운동 도우미)
@@ -322,6 +330,7 @@
         - 운동 기록
     - 특징
     - 배운점
-    - 1일차 
+
+- 1일차 
 
     ![1일차](https://raw.githubusercontent.com/JEONGWOO0705/basic_csharp_2024/main/images/cs006.gif)
