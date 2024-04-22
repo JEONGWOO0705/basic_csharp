@@ -347,6 +347,6 @@
 
     
 
-    https://github.com/JEONGWOO0705/basic_csharp_2024/assets/84116251/6f204e84-fdf1-4652-9d74-200c84f96c3f
+    ![1일차](https://raw.githubusercontent.com/JEONGWOO0705/basic_csharp_2024/main/images/cs006.gif)
 
 
