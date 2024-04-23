@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{D5B8E62D-1C7C-4F56-B03C-B5A24C2BBC8E}</ProjectGuid>
+    <ProjectGuid>{6F7C6A71-4D6D-4EB9-B82A-08DCFA6A3F41}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <RootNamespace>NewBookRentalShopApp</RootNamespace>
     <AssemblyName>NewBookRentalShopApp</AssemblyName>
@@ -58,6 +58,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FrmBookinfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmBookinfo.Designer.cs">
+      <DependentUpon>FrmBookinfo.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -82,8 +88,12 @@
     <Compile Include="FrmMain.Designer.cs">
       <DependentUpon>FrmMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="Helper\Common.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FrmBookinfo.resx">
+      <DependentUpon>FrmBookinfo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmLogin.resx">
       <DependentUpon>FrmLogin.cs</DependentUpon>
     </EmbeddedResource>
@@ -122,7 +132,11 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="books.ico" />
-    <None Include="Resources\login.png" />
+    <None Include="Resources\rental.png" />
+    <None Include="Resources\member.png" />
+    <None Include="Resources\book.png" />
+    <None Include="Resources\division.png" />
+    <None Include="login.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

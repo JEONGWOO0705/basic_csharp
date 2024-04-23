@@ -14,7 +14,7 @@ using MetroFramework.Forms;
 
 namespace NewBookRentalShopApp
 {
-    public partial class FrmLoginUser : MetroForm
+    public partial class FrmBookDivision : MetroForm
     {
         private bool isNew = false; // UPDATE(false), INSERT(true)
         private string connString = "Data Source=localhost;" +
@@ -22,7 +22,7 @@ namespace NewBookRentalShopApp
                                     "Persist Security Info=True;" +
                                     "User ID=sa;Encrypt=False;Password=mssql_p@ss";
 
-        public FrmLoginUser()
+        public FrmBookDivision()
         {
             InitializeComponent();
         }

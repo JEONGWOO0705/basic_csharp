@@ -17,10 +17,6 @@ namespace NewBookRentalShopApp
     public partial class FrmLoginUser : MetroForm
     {
         private bool isNew = false; // UPDATE(false), INSERT(true)
-        private string connString = "Data Source=localhost;" +
-                                    "Initial Catalog=BookRentalShop2024;" +
-                                    "Persist Security Info=True;" +
-                                    "User ID=sa;Encrypt=False;Password=mssql_p@ss";
 
         public FrmLoginUser()
         {
@@ -29,7 +25,10 @@ namespace NewBookRentalShopApp
 
         private void FrmLoginUser_Load(object sender, EventArgs e)
         {
-            RefreshData();
+            using (SqlConnection conn = new SqlConnection(Helper.Common.Connstring))
+            {
+                RefreshData();
+            }
         }
 
         private void BtnNew_Click(object sender, EventArgs e)
@@ -37,21 +36,20 @@ namespace NewBookRentalShopApp
             isNew = true;
             TxtUserIdx.Text = TxtUserId.Text = TxtPassword.Text = string.Empty;
             TxtUserIdx.ReadOnly = true;
-            TxtUserId.Focus(); // 순번은 자동증가하기때문에 입력불가
+            TxtUserId.Focus(); // 순번은 자동증가하기 때문에 입력불가
         }
 
         private void BtnSave_Click(object sender, EventArgs e)
         {
-            var md5Hash = MD5.Create();  // MD5 암호화용 객체 생성
+            var md5Hash = MD5.Create(); //MD5 암호화용 객체 생성
 
-            // 입력검증(Validation Check), 아이디, 패스워드를 안넣으면 
+            // 입력검증(Validation Check), 순번, 이름, 패스워드를 안넣으면
             if (string.IsNullOrEmpty(TxtUserId.Text))
             {
                 MessageBox.Show("사용자아이디를 입력하세요.");
                 return;
             }
-
-            if (string.IsNullOrEmpty(TxtPassword.Text))
+            if(string.IsNullOrEmpty(TxtPassword.Text))
             {
                 MessageBox.Show("패스워드를 입력하세요.");
                 return;
@@ -59,23 +57,22 @@ namespace NewBookRentalShopApp
 
             try
             {
-                using (SqlConnection conn = new SqlConnection(connString))
+                using (SqlConnection conn = new SqlConnection(Helper.Common.Connstring))
                 {
                     conn.Open();
 
                     var query = "";
                     if (isNew) // INSERT이면
                     {
-                        query = @"INSERT INTO usertbl
-                                        ( userId
-                                        , [password]
-		                                )
+                        query = @"INSERT INTO  usertbl
+                                         ( userId
+                                         , [password])
+           
                                    VALUES
-                                        ( @userId
-                                        , @password
-		                                )";
+                                         ( @userId
+                                         , @password) ";
                     }
-                    else  // UPADATE
+                    else // UPDATE
                     {
                         query = @"UPDATE usertbl
                                  SET userId = @userId
@@ -84,14 +81,13 @@ namespace NewBookRentalShopApp
                     }
 
                     SqlCommand cmd = new SqlCommand(query, conn);
-                    if (isNew == false) // update시는 @userIdx 파라미터 필요!
+                    if (isNew == false) // UPDATE시는 @userIdx 파라미터 필요!
                     {
-                        SqlParameter prmUserIdx = new SqlParameter("@userIdx", TxtUserIdx.Text);
-                        cmd.Parameters.Add(prmUserIdx);
+                        SqlParameter prmuserIdx = new SqlParameter("@userIdx", TxtUserIdx.Text);
+                        cmd.Parameters.Add(prmuserIdx);
                     }
-
                     SqlParameter prmUserId = new SqlParameter("@userId", TxtUserId.Text);
-                    SqlParameter prmPassword = new SqlParameter("@password", GetMd5Hash(md5Hash, TxtPassword.Text)); // 암호화 끝.
+                    SqlParameter prmPassword = new SqlParameter("@password", Helper.Common.GetMd5Hash(md5Hash, TxtPassword.Text)); // 암호화 끝.
                     // Command에 Parameter를 연결해줘야 함!
                     cmd.Parameters.Add(prmUserId);
                     cmd.Parameters.Add(prmPassword);
@@ -108,21 +104,20 @@ namespace NewBookRentalShopApp
                     {
                         MetroMessageBox.Show(this, "저장실패!", "저장", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
-
                 }
             }
             catch (Exception ex)
             {
-                MetroMessageBox.Show(this, $"오류  : {ex.Message}", "오류", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MetroMessageBox.Show(this, $"오류 : {ex.Message}", "오류", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-
-            TxtUserIdx.Text = TxtUserId.Text = TxtPassword.Text = string.Empty; // 입력, 수정, 삭제 이후에는 모든 입력값을 지워줘야 함
+            
+            TxtUserId.Text = TxtUserIdx.Text = TxtPassword.Text = string.Empty; // 입력, 수정, 삭제 이후에는 모든 입력값을 지워줘야함
             RefreshData();
         }
 
         private void BtnDel_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(TxtUserIdx.Text))  // 사용자아이디순번이 없으면 
+            if (string.IsNullOrEmpty(TxtUserIdx.Text)) // 사용자아이디순번이 없으면
             {
                 MetroMessageBox.Show(this, "삭제할 사용자를 선택하세요", "오류", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
@@ -131,44 +126,43 @@ namespace NewBookRentalShopApp
             var answer = MetroMessageBox.Show(this, "정말 삭제하시겠습니까?", "삭제여부", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (answer == DialogResult.No) return;
 
-            using (SqlConnection conn = new SqlConnection(connString))
+            using (SqlConnection conn = new SqlConnection(Helper.Common.Connstring))
             {
                 conn.Open();
-                var query = @"DELETE FROM usertbl WHERE userIdx = @userIdx ";
+                var query = @"DELETE FROM usertbl WHERE userIdx = @userIdx";
 
                 SqlCommand cmd = new SqlCommand(query, conn);
-                SqlParameter prmUserIdx = new SqlParameter("@userIdx", TxtUserIdx.Text);
-                cmd.Parameters.Add(prmUserIdx);
+                SqlParameter prmuserIdx = new SqlParameter("@userIdx", TxtUserIdx.Text);
+                cmd.Parameters.Add(prmuserIdx);
 
                 var result = cmd.ExecuteNonQuery();
 
                 if (result > 0)
                 {
                     MetroMessageBox.Show(this, "삭제성공!", "삭제", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
                 }
                 else
                 {
                     MetroMessageBox.Show(this, "삭제실패!", "삭제", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
                 }
             }
-
-            TxtUserIdx.Text = TxtUserId.Text = TxtPassword.Text = string.Empty; // 입력, 수정, 삭제 이후에는 모든 입력값을 지워줘야 함
-            RefreshData(); // 데이터그리드 재조회
+            
+            TxtUserId.Text = TxtUserIdx.Text = TxtPassword.Text = string.Empty;
+            RefreshData (); // 데이터그리드 재조회
         }
 
-        // 데이터그리뷰에 데이터를 새로부르기
         private void RefreshData()
         {
-            using (SqlConnection conn = new SqlConnection(connString))
+            using (SqlConnection conn = new SqlConnection(Helper.Common.Connstring))
             {
                 conn.Open();
 
-                var query = @"SELECT userIdx
-                                   , userId
-                                   , [password]
-                                   , lastLoginDateTime
-                                FROM usertbl";
+                var query = @"SELECT  userIdx
+                                    , userId
+                                    , [password]
+                                    , lastLoginDateTime
+                                FROM  usertbl";
                 SqlDataAdapter adapter = new SqlDataAdapter(query, conn);
                 DataSet ds = new DataSet();
                 adapter.Fill(ds, "usertbl");
@@ -178,7 +172,7 @@ namespace NewBookRentalShopApp
                 DgvResult.Columns[0].HeaderText = "사용자순번";
                 DgvResult.Columns[1].HeaderText = "사용자아이디";
                 DgvResult.Columns[2].HeaderText = "패스워드";
-                DgvResult.Columns[3].HeaderText = "마지막로그인날짜";
+                DgvResult.Columns[3].HeaderText = "마직막로그인날짜";
             }
         }
 
@@ -188,27 +182,13 @@ namespace NewBookRentalShopApp
             {
                 var selData = DgvResult.Rows[e.RowIndex]; // 내가 선택한 인덱스값
                 TxtUserIdx.Text = selData.Cells[0].Value.ToString();
-                TxtUserIdx.ReadOnly = true;
+                TxtUserIdx.ReadOnly = true ;
                 TxtUserId.Text = selData.Cells[1].Value.ToString();
                 TxtPassword.Text = selData.Cells[2].Value.ToString();
 
-                isNew = false;  // UPDATE
+                isNew = false; //UPDATE
             }
         }
 
-        // MD5 해시 알고리즘 암호화
-        // 1234 --> 01011011 -> 110010101101011 -> x65xAEx11..
-        string GetMd5Hash(MD5 md5Hash, string input)
-        {
-            // 입력문자열을 byte배열로 변환한 뒤 MD5 해시 처리
-            byte[] data = md5Hash.ComputeHash(Encoding.UTF8.GetBytes(input));
-            StringBuilder builder = new StringBuilder(); // 문자열을 좀더 쉽게 쓰게 만들어주는 클래스
-            for (int i = 0; i < data.Length; i++)
-            {
-                builder.Append(data[i].ToString("x2")); // 16진수 문자로 각 글자를 전부 변환
-            }
-
-            return builder.ToString();
-        }
     }
 }
