@@ -15,6 +15,7 @@ namespace NewBookRentalShopApp
     {
         // 각 화면을 초기화
         FrmLoginUser frmLoginUser = null; // 객체를 메서드로 생성
+
         public FrmMain()
         {
             InitializeComponent();
@@ -25,20 +26,20 @@ namespace NewBookRentalShopApp
         {
             FrmLogin frm = new FrmLogin();
             frm.StartPosition = FormStartPosition.CenterScreen;
-            frm.TopMost = true; // 가장 윈도우화면 상단에
+            frm.TopMost = true; // 가장 윈도우화면 상단에 
             frm.ShowDialog();
         }
 
         private void MnuLoginUsers_Click(object sender, EventArgs e)
         {
-            // 이미 창이 열려있으면 새로 생성할 필요가 없기 때문에
-            // 이런 작업을 안하면 메뉴 클릭시마다 새 폼이 열림
+            // 이미 창이 열려있으면 새로 생성할필요가 없기 때문에
+            // 이런 작업을 안하면 메뉴클릭시마다 새 폼이 열림
             frmLoginUser = ShowActiveForm(frmLoginUser, typeof(FrmLoginUser)) as FrmLoginUser;
         }
 
         Form ShowActiveForm(Form form, Type type)
         {
-            if (form == null) // 화면이 한 번도 안열렸으면
+            if (form == null) // 화면이 한번도 안열였으면
             {
                 form = Activator.CreateInstance(type) as Form; // 타입은 클래스 타입
                 form.MdiParent = this; // 자식창의 부모는 FrmMain
