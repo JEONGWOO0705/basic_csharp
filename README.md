@@ -331,6 +331,11 @@
 ## 8일차
 - 토이 프로젝트
     - 도서관리 앱 종료
+        - 앱 사용자 관리
+        - 책 장르 관리
+        - 책 정보 관리
+        - 회원 관리
+        - 대출 관리
     - IoT Dummy 앱 with SQL Server (IoT, DB)
     - 국가교통정보센터 CCTV 뷰 앱   (OpenAPI, NuGet dll, NetWork, UI디자인, 비동기 메서드)
 
