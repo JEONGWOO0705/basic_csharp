@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.9.34728.123
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assistant_Workout", "Assistant_Workout\Assistant_Workout.csproj", "{872F345E-CDBE-4A89-B810-D9D1002DE7FF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Assistant_Workout", "Assistant_Workout\Assistant_Workout.csproj", "{872F345E-CDBE-4A89-B810-D9D1002DE7FF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WorkOut", "WorkOut\WorkOut.csproj", "{39A7613E-9AAB-4263-B330-A88E06F7A4DC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{872F345E-CDBE-4A89-B810-D9D1002DE7FF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{872F345E-CDBE-4A89-B810-D9D1002DE7FF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{872F345E-CDBE-4A89-B810-D9D1002DE7FF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{39A7613E-9AAB-4263-B330-A88E06F7A4DC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{39A7613E-9AAB-4263-B330-A88E06F7A4DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{39A7613E-9AAB-4263-B330-A88E06F7A4DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{39A7613E-9AAB-4263-B330-A88E06F7A4DC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

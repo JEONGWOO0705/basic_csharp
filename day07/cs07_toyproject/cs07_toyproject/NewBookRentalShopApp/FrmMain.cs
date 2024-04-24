@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MetroFramework;
 using MetroFramework.Forms;
 
 namespace NewBookRentalShopApp
@@ -17,6 +18,8 @@ namespace NewBookRentalShopApp
         FrmLoginUser frmLoginUser = null; // 객체를 메서드로 생성
         FrmBookDivision frmBookDivision = null;
         FrmBookinfo frmBookinfo = null;
+        FrmMember frmMember = null; // FrmMember : 클래스, frmMember : 객체 변수
+        FrmBookRental frmBookRental = null;
         public FrmMain()
         {
             InitializeComponent();
@@ -29,6 +32,7 @@ namespace NewBookRentalShopApp
             frm.StartPosition = FormStartPosition.CenterScreen;
             frm.TopMost = true; // 가장윈도우화면 상단에
             frm.ShowDialog();
+            LblLoginId2.Text = Helper.Common.LoginID;
         }
 
         private void MnuLoginUsers_Click(object sender, EventArgs e)
@@ -37,6 +41,8 @@ namespace NewBookRentalShopApp
             // 이런 작업을 안하면 메뉴클릭시마다 새 폼이 열림
             frmLoginUser = ShowActiveForm(frmLoginUser, typeof(FrmLoginUser)) as FrmLoginUser;
         }
+
+        #region '메뉴 클릭 이벤트 핸들러'
 
         // 책 장르관리 메뉴 클릭 이벤트핸들러
         private void MnuBookDivision_Click(object sender, EventArgs e)
@@ -47,6 +53,16 @@ namespace NewBookRentalShopApp
         {
             frmBookinfo = ShowActiveForm(frmBookinfo,typeof(FrmBookinfo)) as FrmBookinfo;
         }
+        private void MnuMembers_Click(object sender, EventArgs e)
+        {
+            frmMember = ShowActiveForm(frmMember, typeof(FrmMember)) as FrmMember;
+        }
+
+        private void MnuBookRental_Click(object sender, EventArgs e)
+        {
+            frmBookRental = ShowActiveForm(frmBookRental, typeof(FrmBookRental)) as FrmBookRental;
+        }
+        #endregion
 
         Form ShowActiveForm(Form form, Type type)
         {
@@ -74,5 +90,25 @@ namespace NewBookRentalShopApp
             return form;
         }
 
+        private void FrmMain_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            var res = MetroMessageBox.Show(this, "종료하시겠습니까?","종료여부",
+                MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (res == DialogResult.No) 
+            {
+                e.Cancel = true;
+            }
+            else
+            {
+                Environment.Exit(0);
+            }
+        }
+
+        private void MnuAbout_Click(object sender, EventArgs e)
+        {
+            FrmAbout popup = new FrmAbout();
+            popup.StartPosition = FormStartPosition.CenterParent;
+            popup.ShowDialog();
+        }
     }
 }

@@ -32,6 +32,16 @@
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.DgvResult = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.NudPrice = new System.Windows.Forms.NumericUpDown();
+            this.DtpReleaseDate = new MetroFramework.Controls.MetroDateTime();
+            this.CboDivision = new MetroFramework.Controls.MetroComboBox();
+            this.metroLabel7 = new MetroFramework.Controls.MetroLabel();
+            this.TxtIsbn = new MetroFramework.Controls.MetroTextBox();
+            this.metroLabel5 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel6 = new MetroFramework.Controls.MetroLabel();
+            this.TxtNames = new MetroFramework.Controls.MetroTextBox();
+            this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel4 = new MetroFramework.Controls.MetroLabel();
             this.BtnDel = new MetroFramework.Controls.MetroButton();
             this.BtnSave = new MetroFramework.Controls.MetroButton();
             this.BtnNew = new MetroFramework.Controls.MetroButton();
@@ -39,16 +49,6 @@
             this.TxtBookIdx = new MetroFramework.Controls.MetroTextBox();
             this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
             this.Lb1 = new MetroFramework.Controls.MetroLabel();
-            this.TxtNames = new MetroFramework.Controls.MetroTextBox();
-            this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel4 = new MetroFramework.Controls.MetroLabel();
-            this.TxtIsbn = new MetroFramework.Controls.MetroTextBox();
-            this.metroLabel5 = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel6 = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel7 = new MetroFramework.Controls.MetroLabel();
-            this.CboDivision = new MetroFramework.Controls.MetroComboBox();
-            this.DtpReleaseDate = new MetroFramework.Controls.MetroDateTime();
-            this.NudPrice = new System.Windows.Forms.NumericUpDown();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -113,6 +113,151 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "책정보 입력 항목";
+            // 
+            // NudPrice
+            // 
+            this.NudPrice.Location = new System.Drawing.Point(125, 217);
+            this.NudPrice.Maximum = new decimal(new int[] {
+            10000000,
+            0,
+            0,
+            0});
+            this.NudPrice.Name = "NudPrice";
+            this.NudPrice.Size = new System.Drawing.Size(216, 19);
+            this.NudPrice.TabIndex = 7;
+            // 
+            // DtpReleaseDate
+            // 
+            this.DtpReleaseDate.Location = new System.Drawing.Point(125, 153);
+            this.DtpReleaseDate.MinimumSize = new System.Drawing.Size(0, 29);
+            this.DtpReleaseDate.Name = "DtpReleaseDate";
+            this.DtpReleaseDate.Size = new System.Drawing.Size(216, 29);
+            this.DtpReleaseDate.TabIndex = 5;
+            // 
+            // CboDivision
+            // 
+            this.CboDivision.FormattingEnabled = true;
+            this.CboDivision.ItemHeight = 23;
+            this.CboDivision.Location = new System.Drawing.Point(125, 89);
+            this.CboDivision.Name = "CboDivision";
+            this.CboDivision.Size = new System.Drawing.Size(216, 29);
+            this.CboDivision.TabIndex = 3;
+            this.CboDivision.UseSelectable = true;
+            // 
+            // metroLabel7
+            // 
+            this.metroLabel7.AutoSize = true;
+            this.metroLabel7.Location = new System.Drawing.Point(64, 217);
+            this.metroLabel7.Name = "metroLabel7";
+            this.metroLabel7.Size = new System.Drawing.Size(55, 19);
+            this.metroLabel7.TabIndex = 17;
+            this.metroLabel7.Text = "책 가격";
+            this.metroLabel7.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // TxtIsbn
+            // 
+            // 
+            // 
+            // 
+            this.TxtIsbn.CustomButton.Image = null;
+            this.TxtIsbn.CustomButton.Location = new System.Drawing.Point(194, 1);
+            this.TxtIsbn.CustomButton.Name = "";
+            this.TxtIsbn.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.TxtIsbn.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.TxtIsbn.CustomButton.TabIndex = 1;
+            this.TxtIsbn.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.TxtIsbn.CustomButton.UseSelectable = true;
+            this.TxtIsbn.CustomButton.Visible = false;
+            this.TxtIsbn.Lines = new string[0];
+            this.TxtIsbn.Location = new System.Drawing.Point(125, 188);
+            this.TxtIsbn.MaxLength = 13;
+            this.TxtIsbn.Name = "TxtIsbn";
+            this.TxtIsbn.PasswordChar = '\0';
+            this.TxtIsbn.PromptText = "Isbn 입력";
+            this.TxtIsbn.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.TxtIsbn.SelectedText = "";
+            this.TxtIsbn.SelectionLength = 0;
+            this.TxtIsbn.SelectionStart = 0;
+            this.TxtIsbn.ShortcutsEnabled = true;
+            this.TxtIsbn.Size = new System.Drawing.Size(216, 23);
+            this.TxtIsbn.TabIndex = 6;
+            this.TxtIsbn.UseSelectable = true;
+            this.TxtIsbn.WaterMark = "Isbn 입력";
+            this.TxtIsbn.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.TxtIsbn.WaterMarkFont = new System.Drawing.Font("나눔고딕코딩", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtIsbn.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtIsbn_KeyPress);
+            // 
+            // metroLabel5
+            // 
+            this.metroLabel5.AutoSize = true;
+            this.metroLabel5.Location = new System.Drawing.Point(82, 192);
+            this.metroLabel5.Name = "metroLabel5";
+            this.metroLabel5.Size = new System.Drawing.Size(37, 19);
+            this.metroLabel5.TabIndex = 14;
+            this.metroLabel5.Text = "ISBN";
+            this.metroLabel5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // metroLabel6
+            // 
+            this.metroLabel6.AutoSize = true;
+            this.metroLabel6.Location = new System.Drawing.Point(68, 163);
+            this.metroLabel6.Name = "metroLabel6";
+            this.metroLabel6.Size = new System.Drawing.Size(51, 19);
+            this.metroLabel6.TabIndex = 13;
+            this.metroLabel6.Text = "출판일";
+            this.metroLabel6.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // TxtNames
+            // 
+            // 
+            // 
+            // 
+            this.TxtNames.CustomButton.Image = null;
+            this.TxtNames.CustomButton.Location = new System.Drawing.Point(194, 1);
+            this.TxtNames.CustomButton.Name = "";
+            this.TxtNames.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.TxtNames.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.TxtNames.CustomButton.TabIndex = 1;
+            this.TxtNames.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.TxtNames.CustomButton.UseSelectable = true;
+            this.TxtNames.CustomButton.Visible = false;
+            this.TxtNames.Lines = new string[0];
+            this.TxtNames.Location = new System.Drawing.Point(125, 124);
+            this.TxtNames.MaxLength = 32767;
+            this.TxtNames.Name = "TxtNames";
+            this.TxtNames.PasswordChar = '\0';
+            this.TxtNames.PromptText = "책 제목 입력";
+            this.TxtNames.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.TxtNames.SelectedText = "";
+            this.TxtNames.SelectionLength = 0;
+            this.TxtNames.SelectionStart = 0;
+            this.TxtNames.ShortcutsEnabled = true;
+            this.TxtNames.Size = new System.Drawing.Size(216, 23);
+            this.TxtNames.TabIndex = 4;
+            this.TxtNames.UseSelectable = true;
+            this.TxtNames.WaterMark = "책 제목 입력";
+            this.TxtNames.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.TxtNames.WaterMarkFont = new System.Drawing.Font("나눔고딕코딩", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            // 
+            // metroLabel1
+            // 
+            this.metroLabel1.AutoSize = true;
+            this.metroLabel1.Location = new System.Drawing.Point(64, 128);
+            this.metroLabel1.Name = "metroLabel1";
+            this.metroLabel1.Size = new System.Drawing.Size(55, 19);
+            this.metroLabel1.TabIndex = 10;
+            this.metroLabel1.Text = "책 제목";
+            this.metroLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // metroLabel4
+            // 
+            this.metroLabel4.AutoSize = true;
+            this.metroLabel4.Location = new System.Drawing.Point(68, 99);
+            this.metroLabel4.Name = "metroLabel4";
+            this.metroLabel4.Size = new System.Drawing.Size(51, 19);
+            this.metroLabel4.TabIndex = 9;
+            this.metroLabel4.Text = "구분명";
+            this.metroLabel4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // BtnDel
             // 
@@ -226,150 +371,6 @@
             this.Lb1.TabIndex = 1;
             this.Lb1.Text = "책 순번";
             this.Lb1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // TxtNames
-            // 
-            // 
-            // 
-            // 
-            this.TxtNames.CustomButton.Image = null;
-            this.TxtNames.CustomButton.Location = new System.Drawing.Point(194, 1);
-            this.TxtNames.CustomButton.Name = "";
-            this.TxtNames.CustomButton.Size = new System.Drawing.Size(21, 21);
-            this.TxtNames.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.TxtNames.CustomButton.TabIndex = 1;
-            this.TxtNames.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.TxtNames.CustomButton.UseSelectable = true;
-            this.TxtNames.CustomButton.Visible = false;
-            this.TxtNames.Lines = new string[0];
-            this.TxtNames.Location = new System.Drawing.Point(125, 124);
-            this.TxtNames.MaxLength = 32767;
-            this.TxtNames.Name = "TxtNames";
-            this.TxtNames.PasswordChar = '\0';
-            this.TxtNames.PromptText = "책 제목 입력";
-            this.TxtNames.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.TxtNames.SelectedText = "";
-            this.TxtNames.SelectionLength = 0;
-            this.TxtNames.SelectionStart = 0;
-            this.TxtNames.ShortcutsEnabled = true;
-            this.TxtNames.Size = new System.Drawing.Size(216, 23);
-            this.TxtNames.TabIndex = 4;
-            this.TxtNames.UseSelectable = true;
-            this.TxtNames.WaterMark = "책 제목 입력";
-            this.TxtNames.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.TxtNames.WaterMarkFont = new System.Drawing.Font("나눔고딕코딩", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            // 
-            // metroLabel1
-            // 
-            this.metroLabel1.AutoSize = true;
-            this.metroLabel1.Location = new System.Drawing.Point(64, 128);
-            this.metroLabel1.Name = "metroLabel1";
-            this.metroLabel1.Size = new System.Drawing.Size(55, 19);
-            this.metroLabel1.TabIndex = 10;
-            this.metroLabel1.Text = "책 제목";
-            this.metroLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // metroLabel4
-            // 
-            this.metroLabel4.AutoSize = true;
-            this.metroLabel4.Location = new System.Drawing.Point(68, 99);
-            this.metroLabel4.Name = "metroLabel4";
-            this.metroLabel4.Size = new System.Drawing.Size(51, 19);
-            this.metroLabel4.TabIndex = 9;
-            this.metroLabel4.Text = "구분명";
-            this.metroLabel4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // TxtIsbn
-            // 
-            // 
-            // 
-            // 
-            this.TxtIsbn.CustomButton.Image = null;
-            this.TxtIsbn.CustomButton.Location = new System.Drawing.Point(194, 1);
-            this.TxtIsbn.CustomButton.Name = "";
-            this.TxtIsbn.CustomButton.Size = new System.Drawing.Size(21, 21);
-            this.TxtIsbn.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.TxtIsbn.CustomButton.TabIndex = 1;
-            this.TxtIsbn.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.TxtIsbn.CustomButton.UseSelectable = true;
-            this.TxtIsbn.CustomButton.Visible = false;
-            this.TxtIsbn.Lines = new string[0];
-            this.TxtIsbn.Location = new System.Drawing.Point(125, 188);
-            this.TxtIsbn.MaxLength = 32767;
-            this.TxtIsbn.Name = "TxtIsbn";
-            this.TxtIsbn.PasswordChar = '\0';
-            this.TxtIsbn.PromptText = "Isbn 입력";
-            this.TxtIsbn.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.TxtIsbn.SelectedText = "";
-            this.TxtIsbn.SelectionLength = 0;
-            this.TxtIsbn.SelectionStart = 0;
-            this.TxtIsbn.ShortcutsEnabled = true;
-            this.TxtIsbn.Size = new System.Drawing.Size(216, 23);
-            this.TxtIsbn.TabIndex = 6;
-            this.TxtIsbn.UseSelectable = true;
-            this.TxtIsbn.WaterMark = "Isbn 입력";
-            this.TxtIsbn.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.TxtIsbn.WaterMarkFont = new System.Drawing.Font("나눔고딕코딩", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            // 
-            // metroLabel5
-            // 
-            this.metroLabel5.AutoSize = true;
-            this.metroLabel5.Location = new System.Drawing.Point(82, 192);
-            this.metroLabel5.Name = "metroLabel5";
-            this.metroLabel5.Size = new System.Drawing.Size(37, 19);
-            this.metroLabel5.TabIndex = 14;
-            this.metroLabel5.Text = "ISBN";
-            this.metroLabel5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // metroLabel6
-            // 
-            this.metroLabel6.AutoSize = true;
-            this.metroLabel6.Location = new System.Drawing.Point(68, 163);
-            this.metroLabel6.Name = "metroLabel6";
-            this.metroLabel6.Size = new System.Drawing.Size(51, 19);
-            this.metroLabel6.TabIndex = 13;
-            this.metroLabel6.Text = "출판일";
-            this.metroLabel6.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // metroLabel7
-            // 
-            this.metroLabel7.AutoSize = true;
-            this.metroLabel7.Location = new System.Drawing.Point(64, 217);
-            this.metroLabel7.Name = "metroLabel7";
-            this.metroLabel7.Size = new System.Drawing.Size(55, 19);
-            this.metroLabel7.TabIndex = 17;
-            this.metroLabel7.Text = "책 가격";
-            this.metroLabel7.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // CboDivision
-            // 
-            this.CboDivision.FormattingEnabled = true;
-            this.CboDivision.ItemHeight = 23;
-            this.CboDivision.Location = new System.Drawing.Point(125, 89);
-            this.CboDivision.Name = "CboDivision";
-            this.CboDivision.Size = new System.Drawing.Size(216, 29);
-            this.CboDivision.TabIndex = 3;
-            this.CboDivision.UseSelectable = true;
-            // 
-            // DtpReleaseDate
-            // 
-            this.DtpReleaseDate.Location = new System.Drawing.Point(125, 153);
-            this.DtpReleaseDate.MinimumSize = new System.Drawing.Size(0, 29);
-            this.DtpReleaseDate.Name = "DtpReleaseDate";
-            this.DtpReleaseDate.Size = new System.Drawing.Size(216, 29);
-            this.DtpReleaseDate.TabIndex = 5;
-            // 
-            // NudPrice
-            // 
-            this.NudPrice.Location = new System.Drawing.Point(125, 217);
-            this.NudPrice.Maximum = new decimal(new int[] {
-            10000000,
-            0,
-            0,
-            0});
-            this.NudPrice.Name = "NudPrice";
-            this.NudPrice.Size = new System.Drawing.Size(216, 19);
-            this.NudPrice.TabIndex = 7;
             // 
             // FrmBookinfo
             // 

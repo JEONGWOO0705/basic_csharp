@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_Main));
             groupBox1 = new GroupBox();
             label8 = new Label();
@@ -55,21 +56,25 @@
             BtnBack = new Button();
             BtnChest = new Button();
             groupBox2 = new GroupBox();
+            BtnSet = new Button();
+            label13 = new Label();
+            TxtSetRestTime = new TextBox();
             label12 = new Label();
             label11 = new Label();
             label10 = new Label();
-            textBox9 = new TextBox();
-            textBox8 = new TextBox();
-            textBox7 = new TextBox();
+            TxtSec = new TextBox();
+            TxtMin = new TextBox();
+            TxtHour = new TextBox();
             label9 = new Label();
-            textBox1 = new TextBox();
+            TxtRestTime = new TextBox();
             label3 = new Label();
             label2 = new Label();
-            comboBox1 = new ComboBox();
             label1 = new Label();
-            button6 = new Button();
-            button5 = new Button();
-            button4 = new Button();
+            BtnDone = new Button();
+            BtnStop = new Button();
+            BtnStart = new Button();
+            timer1 = new System.Windows.Forms.Timer(components);
+            timer2 = new System.Windows.Forms.Timer(components);
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
             SuspendLayout();
@@ -166,6 +171,7 @@
             Txtfour.Name = "Txtfour";
             Txtfour.Size = new Size(25, 22);
             Txtfour.TabIndex = 9;
+            Txtfour.Text = "0";
             // 
             // Txtthree
             // 
@@ -174,6 +180,7 @@
             Txtthree.Name = "Txtthree";
             Txtthree.Size = new Size(25, 22);
             Txtthree.TabIndex = 9;
+            Txtthree.Text = "0";
             // 
             // Txttwo
             // 
@@ -182,6 +189,7 @@
             Txttwo.Name = "Txttwo";
             Txttwo.Size = new Size(25, 22);
             Txttwo.TabIndex = 9;
+            Txttwo.Text = "0";
             // 
             // Txtfive
             // 
@@ -190,6 +198,7 @@
             Txtfive.Name = "Txtfive";
             Txtfive.Size = new Size(25, 22);
             Txtfive.TabIndex = 9;
+            Txtfive.Text = "0";
             // 
             // Txtone
             // 
@@ -198,6 +207,7 @@
             Txtone.Name = "Txtone";
             Txtone.Size = new Size(25, 22);
             Txtone.TabIndex = 8;
+            Txtone.Text = "0";
             // 
             // Chkthree
             // 
@@ -208,6 +218,7 @@
             Chkthree.Size = new Size(15, 14);
             Chkthree.TabIndex = 7;
             Chkthree.UseVisualStyleBackColor = true;
+            Chkthree.Click += Chkthree_Click;
             // 
             // Chkfive
             // 
@@ -218,6 +229,7 @@
             Chkfive.Size = new Size(15, 14);
             Chkfive.TabIndex = 7;
             Chkfive.UseVisualStyleBackColor = true;
+            Chkfive.Click += Chkfive_Click;
             // 
             // Chkfour
             // 
@@ -228,6 +240,7 @@
             Chkfour.Size = new Size(15, 14);
             Chkfour.TabIndex = 7;
             Chkfour.UseVisualStyleBackColor = true;
+            Chkfour.Click += Chkfour_Click;
             // 
             // Chktwo
             // 
@@ -238,6 +251,7 @@
             Chktwo.Size = new Size(15, 14);
             Chktwo.TabIndex = 7;
             Chktwo.UseVisualStyleBackColor = true;
+            Chktwo.Click += Chktwo_Click;
             // 
             // Chkone
             // 
@@ -248,6 +262,7 @@
             Chkone.Size = new Size(15, 14);
             Chkone.TabIndex = 7;
             Chkone.UseVisualStyleBackColor = true;
+            Chkone.Click += Chkone_Click;
             // 
             // CboFifth
             // 
@@ -257,6 +272,7 @@
             CboFifth.Name = "CboFifth";
             CboFifth.Size = new Size(179, 23);
             CboFifth.TabIndex = 6;
+            CboFifth.SelectedIndexChanged += CboFifth_SelectedIndexChanged;
             // 
             // CboFourth
             // 
@@ -266,6 +282,7 @@
             CboFourth.Name = "CboFourth";
             CboFourth.Size = new Size(179, 23);
             CboFourth.TabIndex = 5;
+            CboFourth.SelectedIndexChanged += CboFourth_SelectedIndexChanged;
             // 
             // CboThird
             // 
@@ -275,6 +292,7 @@
             CboThird.Name = "CboThird";
             CboThird.Size = new Size(179, 23);
             CboThird.TabIndex = 4;
+            CboThird.SelectedIndexChanged += CboThird_SelectedIndexChanged;
             // 
             // CboSecond
             // 
@@ -284,6 +302,7 @@
             CboSecond.Name = "CboSecond";
             CboSecond.Size = new Size(179, 23);
             CboSecond.TabIndex = 3;
+            CboSecond.SelectedIndexChanged += CboSecond_SelectedIndexChanged;
             // 
             // CboFirst
             // 
@@ -338,29 +357,60 @@
             // 
             // groupBox2
             // 
+            groupBox2.Controls.Add(BtnSet);
+            groupBox2.Controls.Add(label13);
+            groupBox2.Controls.Add(TxtSetRestTime);
             groupBox2.Controls.Add(label12);
             groupBox2.Controls.Add(label11);
             groupBox2.Controls.Add(label10);
-            groupBox2.Controls.Add(textBox9);
-            groupBox2.Controls.Add(textBox8);
-            groupBox2.Controls.Add(textBox7);
+            groupBox2.Controls.Add(TxtSec);
+            groupBox2.Controls.Add(TxtMin);
+            groupBox2.Controls.Add(TxtHour);
             groupBox2.Controls.Add(label9);
-            groupBox2.Controls.Add(textBox1);
+            groupBox2.Controls.Add(TxtRestTime);
             groupBox2.Controls.Add(label3);
             groupBox2.Controls.Add(label2);
-            groupBox2.Controls.Add(comboBox1);
             groupBox2.Controls.Add(label1);
-            groupBox2.Controls.Add(button6);
-            groupBox2.Controls.Add(button5);
-            groupBox2.Controls.Add(button4);
+            groupBox2.Controls.Add(BtnDone);
+            groupBox2.Controls.Add(BtnStop);
+            groupBox2.Controls.Add(BtnStart);
             groupBox2.Font = new Font("휴먼둥근헤드라인", 12F, FontStyle.Bold, GraphicsUnit.Point, 129);
             groupBox2.ForeColor = Color.Red;
             groupBox2.Location = new Point(365, 14);
             groupBox2.Name = "groupBox2";
-            groupBox2.Size = new Size(421, 279);
+            groupBox2.Size = new Size(454, 279);
             groupBox2.TabIndex = 1;
             groupBox2.TabStop = false;
             groupBox2.Text = "운동 타이머";
+            // 
+            // BtnSet
+            // 
+            BtnSet.Font = new Font("휴먼매직체", 8.25F, FontStyle.Bold, GraphicsUnit.Point, 129);
+            BtnSet.Location = new Point(383, 98);
+            BtnSet.Name = "BtnSet";
+            BtnSet.Size = new Size(52, 18);
+            BtnSet.TabIndex = 17;
+            BtnSet.Text = "Set";
+            BtnSet.UseVisualStyleBackColor = true;
+            BtnSet.Click += BtnSet_Click;
+            // 
+            // label13
+            // 
+            label13.AutoSize = true;
+            label13.Location = new Point(286, 150);
+            label13.Name = "label13";
+            label13.Size = new Size(48, 17);
+            label13.TabIndex = 16;
+            label13.Text = "SEC";
+            // 
+            // TxtSetRestTime
+            // 
+            TxtSetRestTime.Font = new Font("나눔고딕", 9.75F);
+            TxtSetRestTime.Location = new Point(180, 98);
+            TxtSetRestTime.Name = "TxtSetRestTime";
+            TxtSetRestTime.PlaceholderText = "쉬는시간을 입력하세요";
+            TxtSetRestTime.Size = new Size(137, 22);
+            TxtSetRestTime.TabIndex = 15;
             // 
             // label12
             // 
@@ -389,29 +439,32 @@
             label10.TabIndex = 12;
             label10.Text = "h";
             // 
-            // textBox9
+            // TxtSec
             // 
-            textBox9.Font = new Font("나눔고딕", 9.75F);
-            textBox9.Location = new Point(331, 48);
-            textBox9.Name = "textBox9";
-            textBox9.Size = new Size(46, 22);
-            textBox9.TabIndex = 11;
+            TxtSec.Font = new Font("나눔고딕", 9.75F);
+            TxtSec.Location = new Point(331, 48);
+            TxtSec.Name = "TxtSec";
+            TxtSec.Size = new Size(46, 22);
+            TxtSec.TabIndex = 11;
+            TxtSec.Text = "0";
             // 
-            // textBox8
+            // TxtMin
             // 
-            textBox8.Font = new Font("나눔고딕", 9.75F);
-            textBox8.Location = new Point(237, 48);
-            textBox8.Name = "textBox8";
-            textBox8.Size = new Size(46, 22);
-            textBox8.TabIndex = 10;
+            TxtMin.Font = new Font("나눔고딕", 9.75F);
+            TxtMin.Location = new Point(237, 48);
+            TxtMin.Name = "TxtMin";
+            TxtMin.Size = new Size(46, 22);
+            TxtMin.TabIndex = 10;
+            TxtMin.Text = "0";
             // 
-            // textBox7
+            // TxtHour
             // 
-            textBox7.Font = new Font("나눔고딕", 9.75F);
-            textBox7.Location = new Point(145, 48);
-            textBox7.Name = "textBox7";
-            textBox7.Size = new Size(46, 22);
-            textBox7.TabIndex = 9;
+            TxtHour.Font = new Font("나눔고딕", 9.75F);
+            TxtHour.Location = new Point(145, 48);
+            TxtHour.Name = "TxtHour";
+            TxtHour.Size = new Size(46, 22);
+            TxtHour.TabIndex = 9;
+            TxtHour.Text = "0";
             // 
             // label9
             // 
@@ -422,13 +475,13 @@
             label9.TabIndex = 8;
             label9.Text = "운동시간";
             // 
-            // textBox1
+            // TxtRestTime
             // 
-            textBox1.Font = new Font("나눔고딕", 9.75F);
-            textBox1.Location = new Point(192, 151);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(100, 22);
-            textBox1.TabIndex = 7;
+            TxtRestTime.Font = new Font("나눔고딕", 9.75F);
+            TxtRestTime.Location = new Point(180, 149);
+            TxtRestTime.Name = "TxtRestTime";
+            TxtRestTime.Size = new Size(100, 22);
+            TxtRestTime.TabIndex = 7;
             // 
             // label3
             // 
@@ -442,20 +495,11 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(286, 99);
+            label2.Location = new Point(323, 99);
             label2.Name = "label2";
             label2.Size = new Size(48, 17);
             label2.TabIndex = 5;
             label2.Text = "SEC";
-            // 
-            // comboBox1
-            // 
-            comboBox1.Font = new Font("나눔고딕", 9.75F);
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(192, 96);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(78, 23);
-            comboBox1.TabIndex = 4;
             // 
             // label1
             // 
@@ -466,42 +510,54 @@
             label1.TabIndex = 2;
             label1.Text = "휴식 시간 설정";
             // 
-            // button6
+            // BtnDone
             // 
-            button6.Font = new Font("휴먼매직체", 12F, FontStyle.Bold);
-            button6.Location = new Point(145, 209);
-            button6.Name = "button6";
-            button6.Size = new Size(100, 40);
-            button6.TabIndex = 1;
-            button6.Text = "DONE";
-            button6.UseVisualStyleBackColor = true;
+            BtnDone.Font = new Font("휴먼매직체", 12F, FontStyle.Bold);
+            BtnDone.Location = new Point(145, 209);
+            BtnDone.Name = "BtnDone";
+            BtnDone.Size = new Size(100, 40);
+            BtnDone.TabIndex = 1;
+            BtnDone.Text = "DONE";
+            BtnDone.UseVisualStyleBackColor = true;
+            BtnDone.Click += BtnDone_Click;
             // 
-            // button5
+            // BtnStop
             // 
-            button5.Font = new Font("휴먼매직체", 12F, FontStyle.Bold);
-            button5.Location = new Point(260, 209);
-            button5.Name = "button5";
-            button5.Size = new Size(100, 40);
-            button5.TabIndex = 1;
-            button5.Text = "STOP";
-            button5.UseVisualStyleBackColor = true;
+            BtnStop.Font = new Font("휴먼매직체", 12F, FontStyle.Bold);
+            BtnStop.Location = new Point(260, 209);
+            BtnStop.Name = "BtnStop";
+            BtnStop.Size = new Size(100, 40);
+            BtnStop.TabIndex = 1;
+            BtnStop.Text = "STOP";
+            BtnStop.UseVisualStyleBackColor = true;
+            BtnStop.Click += BtnStop_Click;
             // 
-            // button4
+            // BtnStart
             // 
-            button4.Font = new Font("휴먼매직체", 12F, FontStyle.Bold);
-            button4.Location = new Point(28, 209);
-            button4.Name = "button4";
-            button4.Size = new Size(100, 40);
-            button4.TabIndex = 0;
-            button4.Text = "START";
-            button4.UseVisualStyleBackColor = true;
+            BtnStart.Font = new Font("휴먼매직체", 12F, FontStyle.Bold);
+            BtnStart.Location = new Point(28, 209);
+            BtnStart.Name = "BtnStart";
+            BtnStart.Size = new Size(100, 40);
+            BtnStart.TabIndex = 0;
+            BtnStart.Text = "START";
+            BtnStart.UseVisualStyleBackColor = true;
+            BtnStart.Click += BtnStart_Click;
+            // 
+            // timer1
+            // 
+            timer1.Interval = 10;
+            timer1.Tick += timer1_Tick;
+            // 
+            // timer2
+            // 
+            timer2.Tick += timer2_Tick;
             // 
             // Frm_Main
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ActiveCaptionText;
-            ClientSize = new Size(802, 466);
+            ClientSize = new Size(831, 470);
             Controls.Add(groupBox2);
             Controls.Add(groupBox1);
             Icon = (Icon)resources.GetObject("$this.Icon");
@@ -522,14 +578,13 @@
         private Button BtnBack;
         private Button BtnChest;
         private GroupBox groupBox2;
-        private Button button5;
-        private Button button4;
+        private Button BtnStop;
+        private Button BtnStart;
         private Label label3;
         private Label label2;
-        private ComboBox comboBox1;
         private Label label1;
-        private Button button6;
-        private TextBox textBox1;
+        private Button BtnDone;
+        private TextBox TxtRestTime;
         private CheckBox Chkthree;
         private CheckBox Chkfive;
         private CheckBox Chkfour;
@@ -554,8 +609,13 @@
         private Label label12;
         private Label label11;
         private Label label10;
-        private TextBox textBox9;
-        private TextBox textBox8;
-        private TextBox textBox7;
+        private TextBox TxtSec;
+        private TextBox TxtMin;
+        private TextBox TxtHour;
+        private System.Windows.Forms.Timer timer1;
+        private Label label13;
+        private TextBox TxtSetRestTime;
+        private Button BtnSet;
+        private System.Windows.Forms.Timer timer2;
     }
 }

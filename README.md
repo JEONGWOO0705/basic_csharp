@@ -347,6 +347,10 @@
         - 회원 관리
         - 대출 관리
 
+        ![책대여프로그램](https://raw.githubusercontent.com/JEONGWOO0705/basic_csharp_2024/main/images/cs006.png)
+
+
+
 ## 개인 토이 프로젝트 
 - 할 것 (헬스 타이머 및 운동 도우미)
     - 기능
@@ -357,9 +361,12 @@
     - 배운점
 
 - 1일차 
-
+    - 디자인 구성
+    - 랜덤 운동 프로그램 완성(가슴 운동만!!)
     
-
     ![1일차](https://raw.githubusercontent.com/JEONGWOO0705/basic_csharp_2024/main/images/cs006.gif)
 
+- 2일차
+    - 세트 수 카운트 
+    - 세트 수에 따른 휴식시간 타이머 및 총 운동 시간 타이머
 

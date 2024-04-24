@@ -171,7 +171,7 @@
             this.TxtDivision.CustomButton.Visible = false;
             this.TxtDivision.Lines = new string[0];
             this.TxtDivision.Location = new System.Drawing.Point(126, 68);
-            this.TxtDivision.MaxLength = 32767;
+            this.TxtDivision.MaxLength = 100;
             this.TxtDivision.Name = "TxtDivision";
             this.TxtDivision.PasswordChar = '\0';
             this.TxtDivision.PromptText = "구분 코드 입력";
