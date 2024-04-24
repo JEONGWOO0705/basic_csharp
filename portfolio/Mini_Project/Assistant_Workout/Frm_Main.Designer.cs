@@ -107,9 +107,11 @@
             groupBox1.Controls.Add(BtnChest);
             groupBox1.Font = new Font("휴먼둥근헤드라인", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 129);
             groupBox1.ForeColor = Color.Red;
-            groupBox1.Location = new Point(12, 12);
+            groupBox1.Location = new Point(15, 16);
+            groupBox1.Margin = new Padding(4);
             groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(347, 446);
+            groupBox1.Padding = new Padding(4);
+            groupBox1.Size = new Size(446, 595);
             groupBox1.TabIndex = 0;
             groupBox1.TabStop = false;
             groupBox1.Text = "오늘의 운동";
@@ -118,9 +120,10 @@
             // 
             label8.AutoSize = true;
             label8.Font = new Font("휴먼둥근헤드라인", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 129);
-            label8.Location = new Point(284, 403);
+            label8.Location = new Point(365, 537);
+            label8.Margin = new Padding(4, 0, 4, 0);
             label8.Name = "label8";
-            label8.Size = new Size(43, 16);
+            label8.Size = new Size(54, 19);
             label8.TabIndex = 13;
             label8.Text = "SET";
             // 
@@ -128,9 +131,10 @@
             // 
             label5.AutoSize = true;
             label5.Font = new Font("휴먼둥근헤드라인", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 129);
-            label5.Location = new Point(284, 265);
+            label5.Location = new Point(365, 353);
+            label5.Margin = new Padding(4, 0, 4, 0);
             label5.Name = "label5";
-            label5.Size = new Size(43, 16);
+            label5.Size = new Size(54, 19);
             label5.TabIndex = 11;
             label5.Text = "SET";
             // 
@@ -138,9 +142,10 @@
             // 
             label6.AutoSize = true;
             label6.Font = new Font("휴먼둥근헤드라인", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 129);
-            label6.Location = new Point(284, 359);
+            label6.Location = new Point(365, 479);
+            label6.Margin = new Padding(4, 0, 4, 0);
             label6.Name = "label6";
-            label6.Size = new Size(43, 16);
+            label6.Size = new Size(54, 19);
             label6.TabIndex = 11;
             label6.Text = "SET";
             // 
@@ -148,9 +153,10 @@
             // 
             label7.AutoSize = true;
             label7.Font = new Font("휴먼둥근헤드라인", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 129);
-            label7.Location = new Point(284, 311);
+            label7.Location = new Point(365, 415);
+            label7.Margin = new Padding(4, 0, 4, 0);
             label7.Name = "label7";
-            label7.Size = new Size(43, 16);
+            label7.Size = new Size(54, 19);
             label7.TabIndex = 12;
             label7.Text = "SET";
             // 
@@ -158,54 +164,60 @@
             // 
             label4.AutoSize = true;
             label4.Font = new Font("휴먼둥근헤드라인", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 129);
-            label4.Location = new Point(284, 219);
+            label4.Location = new Point(365, 292);
+            label4.Margin = new Padding(4, 0, 4, 0);
             label4.Name = "label4";
-            label4.Size = new Size(43, 16);
+            label4.Size = new Size(54, 19);
             label4.TabIndex = 10;
             label4.Text = "SET";
             // 
             // Txtfour
             // 
             Txtfour.Font = new Font("나눔고딕", 9.75F);
-            Txtfour.Location = new Point(253, 352);
+            Txtfour.Location = new Point(325, 469);
+            Txtfour.Margin = new Padding(4);
             Txtfour.Name = "Txtfour";
-            Txtfour.Size = new Size(25, 22);
+            Txtfour.Size = new Size(31, 26);
             Txtfour.TabIndex = 9;
             Txtfour.Text = "0";
             // 
             // Txtthree
             // 
             Txtthree.Font = new Font("나눔고딕", 9.75F);
-            Txtthree.Location = new Point(253, 304);
+            Txtthree.Location = new Point(325, 405);
+            Txtthree.Margin = new Padding(4);
             Txtthree.Name = "Txtthree";
-            Txtthree.Size = new Size(25, 22);
+            Txtthree.Size = new Size(31, 26);
             Txtthree.TabIndex = 9;
             Txtthree.Text = "0";
             // 
             // Txttwo
             // 
             Txttwo.Font = new Font("나눔고딕", 9.75F);
-            Txttwo.Location = new Point(253, 258);
+            Txttwo.Location = new Point(325, 344);
+            Txttwo.Margin = new Padding(4);
             Txttwo.Name = "Txttwo";
-            Txttwo.Size = new Size(25, 22);
+            Txttwo.Size = new Size(31, 26);
             Txttwo.TabIndex = 9;
             Txttwo.Text = "0";
             // 
             // Txtfive
             // 
             Txtfive.Font = new Font("나눔고딕", 9.75F);
-            Txtfive.Location = new Point(253, 397);
+            Txtfive.Location = new Point(325, 529);
+            Txtfive.Margin = new Padding(4);
             Txtfive.Name = "Txtfive";
-            Txtfive.Size = new Size(25, 22);
+            Txtfive.Size = new Size(31, 26);
             Txtfive.TabIndex = 9;
             Txtfive.Text = "0";
             // 
             // Txtone
             // 
             Txtone.Font = new Font("나눔고딕", 9.75F);
-            Txtone.Location = new Point(253, 216);
+            Txtone.Location = new Point(325, 288);
+            Txtone.Margin = new Padding(4);
             Txtone.Name = "Txtone";
-            Txtone.Size = new Size(25, 22);
+            Txtone.Size = new Size(31, 26);
             Txtone.TabIndex = 8;
             Txtone.Text = "0";
             // 
@@ -213,9 +225,10 @@
             // 
             Chkthree.AutoSize = true;
             Chkthree.Font = new Font("휴먼둥근헤드라인", 8.25F, FontStyle.Bold, GraphicsUnit.Point, 129);
-            Chkthree.Location = new Point(222, 313);
+            Chkthree.Location = new Point(285, 417);
+            Chkthree.Margin = new Padding(4);
             Chkthree.Name = "Chkthree";
-            Chkthree.Size = new Size(15, 14);
+            Chkthree.Size = new Size(18, 17);
             Chkthree.TabIndex = 7;
             Chkthree.UseVisualStyleBackColor = true;
             Chkthree.Click += Chkthree_Click;
@@ -224,9 +237,10 @@
             // 
             Chkfive.AutoSize = true;
             Chkfive.Font = new Font("휴먼둥근헤드라인", 8.25F, FontStyle.Bold, GraphicsUnit.Point, 129);
-            Chkfive.Location = new Point(222, 406);
+            Chkfive.Location = new Point(285, 541);
+            Chkfive.Margin = new Padding(4);
             Chkfive.Name = "Chkfive";
-            Chkfive.Size = new Size(15, 14);
+            Chkfive.Size = new Size(18, 17);
             Chkfive.TabIndex = 7;
             Chkfive.UseVisualStyleBackColor = true;
             Chkfive.Click += Chkfive_Click;
@@ -235,9 +249,10 @@
             // 
             Chkfour.AutoSize = true;
             Chkfour.Font = new Font("휴먼둥근헤드라인", 8.25F, FontStyle.Bold, GraphicsUnit.Point, 129);
-            Chkfour.Location = new Point(222, 361);
+            Chkfour.Location = new Point(285, 481);
+            Chkfour.Margin = new Padding(4);
             Chkfour.Name = "Chkfour";
-            Chkfour.Size = new Size(15, 14);
+            Chkfour.Size = new Size(18, 17);
             Chkfour.TabIndex = 7;
             Chkfour.UseVisualStyleBackColor = true;
             Chkfour.Click += Chkfour_Click;
@@ -246,9 +261,10 @@
             // 
             Chktwo.AutoSize = true;
             Chktwo.Font = new Font("휴먼둥근헤드라인", 8.25F, FontStyle.Bold, GraphicsUnit.Point, 129);
-            Chktwo.Location = new Point(222, 267);
+            Chktwo.Location = new Point(285, 356);
+            Chktwo.Margin = new Padding(4);
             Chktwo.Name = "Chktwo";
-            Chktwo.Size = new Size(15, 14);
+            Chktwo.Size = new Size(18, 17);
             Chktwo.TabIndex = 7;
             Chktwo.UseVisualStyleBackColor = true;
             Chktwo.Click += Chktwo_Click;
@@ -257,9 +273,10 @@
             // 
             Chkone.AutoSize = true;
             Chkone.Font = new Font("휴먼둥근헤드라인", 8.25F, FontStyle.Bold, GraphicsUnit.Point, 129);
-            Chkone.Location = new Point(222, 222);
+            Chkone.Location = new Point(285, 296);
+            Chkone.Margin = new Padding(4);
             Chkone.Name = "Chkone";
-            Chkone.Size = new Size(15, 14);
+            Chkone.Size = new Size(18, 17);
             Chkone.TabIndex = 7;
             Chkone.UseVisualStyleBackColor = true;
             Chkone.Click += Chkone_Click;
@@ -268,9 +285,10 @@
             // 
             CboFifth.Font = new Font("나눔고딕", 9.75F);
             CboFifth.FormattingEnabled = true;
-            CboFifth.Location = new Point(27, 397);
+            CboFifth.Location = new Point(35, 529);
+            CboFifth.Margin = new Padding(4);
             CboFifth.Name = "CboFifth";
-            CboFifth.Size = new Size(179, 23);
+            CboFifth.Size = new Size(229, 27);
             CboFifth.TabIndex = 6;
             CboFifth.SelectedIndexChanged += CboFifth_SelectedIndexChanged;
             // 
@@ -278,9 +296,10 @@
             // 
             CboFourth.Font = new Font("나눔고딕", 9.75F);
             CboFourth.FormattingEnabled = true;
-            CboFourth.Location = new Point(27, 352);
+            CboFourth.Location = new Point(35, 469);
+            CboFourth.Margin = new Padding(4);
             CboFourth.Name = "CboFourth";
-            CboFourth.Size = new Size(179, 23);
+            CboFourth.Size = new Size(229, 27);
             CboFourth.TabIndex = 5;
             CboFourth.SelectedIndexChanged += CboFourth_SelectedIndexChanged;
             // 
@@ -288,9 +307,10 @@
             // 
             CboThird.Font = new Font("나눔고딕", 9.75F);
             CboThird.FormattingEnabled = true;
-            CboThird.Location = new Point(27, 304);
+            CboThird.Location = new Point(35, 405);
+            CboThird.Margin = new Padding(4);
             CboThird.Name = "CboThird";
-            CboThird.Size = new Size(179, 23);
+            CboThird.Size = new Size(229, 27);
             CboThird.TabIndex = 4;
             CboThird.SelectedIndexChanged += CboThird_SelectedIndexChanged;
             // 
@@ -298,9 +318,10 @@
             // 
             CboSecond.Font = new Font("나눔고딕", 9.75F);
             CboSecond.FormattingEnabled = true;
-            CboSecond.Location = new Point(27, 258);
+            CboSecond.Location = new Point(35, 344);
+            CboSecond.Margin = new Padding(4);
             CboSecond.Name = "CboSecond";
-            CboSecond.Size = new Size(179, 23);
+            CboSecond.Size = new Size(229, 27);
             CboSecond.TabIndex = 3;
             CboSecond.SelectedIndexChanged += CboSecond_SelectedIndexChanged;
             // 
@@ -308,9 +329,10 @@
             // 
             CboFirst.Font = new Font("나눔고딕", 9.75F);
             CboFirst.FormattingEnabled = true;
-            CboFirst.Location = new Point(27, 213);
+            CboFirst.Location = new Point(35, 284);
+            CboFirst.Margin = new Padding(4);
             CboFirst.Name = "CboFirst";
-            CboFirst.Size = new Size(179, 23);
+            CboFirst.Size = new Size(229, 27);
             CboFirst.TabIndex = 2;
             CboFirst.SelectedIndexChanged += CboFirst_SelectedIndexChanged;
             // 
@@ -318,38 +340,44 @@
             // 
             LstDoit.Font = new Font("나눔고딕", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 129);
             LstDoit.FormattingEnabled = true;
-            LstDoit.ItemHeight = 15;
-            LstDoit.Location = new Point(27, 92);
+            LstDoit.ItemHeight = 19;
+            LstDoit.Location = new Point(35, 123);
+            LstDoit.Margin = new Padding(4);
             LstDoit.Name = "LstDoit";
-            LstDoit.Size = new Size(287, 94);
+            LstDoit.Size = new Size(368, 118);
             LstDoit.TabIndex = 1;
             // 
             // BtnLeg
             // 
             BtnLeg.Font = new Font("휴먼모음T", 14.25F, FontStyle.Bold);
-            BtnLeg.Location = new Point(228, 37);
+            BtnLeg.Location = new Point(293, 49);
+            BtnLeg.Margin = new Padding(4);
             BtnLeg.Name = "BtnLeg";
-            BtnLeg.Size = new Size(86, 33);
+            BtnLeg.Size = new Size(111, 44);
             BtnLeg.TabIndex = 0;
             BtnLeg.Text = "하체";
             BtnLeg.UseVisualStyleBackColor = true;
+            BtnLeg.Click += BtnLeg_Click;
             // 
             // BtnBack
             // 
             BtnBack.Font = new Font("휴먼모음T", 14.25F, FontStyle.Bold);
-            BtnBack.Location = new Point(129, 37);
+            BtnBack.Location = new Point(166, 49);
+            BtnBack.Margin = new Padding(4);
             BtnBack.Name = "BtnBack";
-            BtnBack.Size = new Size(86, 33);
+            BtnBack.Size = new Size(111, 44);
             BtnBack.TabIndex = 0;
             BtnBack.Text = "등";
             BtnBack.UseVisualStyleBackColor = true;
+            BtnBack.Click += BtnBack_Click;
             // 
             // BtnChest
             // 
             BtnChest.Font = new Font("휴먼모음T", 14.25F, FontStyle.Bold);
-            BtnChest.Location = new Point(27, 37);
+            BtnChest.Location = new Point(35, 49);
+            BtnChest.Margin = new Padding(4);
             BtnChest.Name = "BtnChest";
-            BtnChest.Size = new Size(86, 33);
+            BtnChest.Size = new Size(111, 44);
             BtnChest.TabIndex = 0;
             BtnChest.Text = "가슴";
             BtnChest.UseVisualStyleBackColor = true;
@@ -376,9 +404,11 @@
             groupBox2.Controls.Add(BtnStart);
             groupBox2.Font = new Font("휴먼둥근헤드라인", 12F, FontStyle.Bold, GraphicsUnit.Point, 129);
             groupBox2.ForeColor = Color.Red;
-            groupBox2.Location = new Point(365, 14);
+            groupBox2.Location = new Point(469, 19);
+            groupBox2.Margin = new Padding(4);
             groupBox2.Name = "groupBox2";
-            groupBox2.Size = new Size(454, 279);
+            groupBox2.Padding = new Padding(4);
+            groupBox2.Size = new Size(584, 372);
             groupBox2.TabIndex = 1;
             groupBox2.TabStop = false;
             groupBox2.Text = "운동 타이머";
@@ -386,9 +416,10 @@
             // BtnSet
             // 
             BtnSet.Font = new Font("휴먼매직체", 8.25F, FontStyle.Bold, GraphicsUnit.Point, 129);
-            BtnSet.Location = new Point(383, 98);
+            BtnSet.Location = new Point(492, 131);
+            BtnSet.Margin = new Padding(4);
             BtnSet.Name = "BtnSet";
-            BtnSet.Size = new Size(52, 18);
+            BtnSet.Size = new Size(67, 24);
             BtnSet.TabIndex = 17;
             BtnSet.Text = "Set";
             BtnSet.UseVisualStyleBackColor = true;
@@ -397,125 +428,139 @@
             // label13
             // 
             label13.AutoSize = true;
-            label13.Location = new Point(286, 150);
+            label13.Location = new Point(368, 200);
+            label13.Margin = new Padding(4, 0, 4, 0);
             label13.Name = "label13";
-            label13.Size = new Size(48, 17);
+            label13.Size = new Size(57, 21);
             label13.TabIndex = 16;
             label13.Text = "SEC";
             // 
             // TxtSetRestTime
             // 
             TxtSetRestTime.Font = new Font("나눔고딕", 9.75F);
-            TxtSetRestTime.Location = new Point(180, 98);
+            TxtSetRestTime.Location = new Point(231, 131);
+            TxtSetRestTime.Margin = new Padding(4);
             TxtSetRestTime.Name = "TxtSetRestTime";
             TxtSetRestTime.PlaceholderText = "쉬는시간을 입력하세요";
-            TxtSetRestTime.Size = new Size(137, 22);
+            TxtSetRestTime.Size = new Size(175, 26);
             TxtSetRestTime.TabIndex = 15;
             // 
             // label12
             // 
             label12.AutoSize = true;
-            label12.Location = new Point(383, 53);
+            label12.Location = new Point(492, 71);
+            label12.Margin = new Padding(4, 0, 4, 0);
             label12.Name = "label12";
-            label12.Size = new Size(20, 17);
+            label12.Size = new Size(25, 21);
             label12.TabIndex = 14;
             label12.Text = "s";
             // 
             // label11
             // 
             label11.AutoSize = true;
-            label11.Location = new Point(292, 53);
+            label11.Location = new Point(375, 71);
+            label11.Margin = new Padding(4, 0, 4, 0);
             label11.Name = "label11";
-            label11.Size = new Size(25, 17);
+            label11.Size = new Size(31, 21);
             label11.TabIndex = 13;
             label11.Text = "m";
             // 
             // label10
             // 
             label10.AutoSize = true;
-            label10.Location = new Point(199, 53);
+            label10.Location = new Point(256, 71);
+            label10.Margin = new Padding(4, 0, 4, 0);
             label10.Name = "label10";
-            label10.Size = new Size(21, 17);
+            label10.Size = new Size(26, 21);
             label10.TabIndex = 12;
             label10.Text = "h";
             // 
             // TxtSec
             // 
             TxtSec.Font = new Font("나눔고딕", 9.75F);
-            TxtSec.Location = new Point(331, 48);
+            TxtSec.Location = new Point(426, 64);
+            TxtSec.Margin = new Padding(4);
             TxtSec.Name = "TxtSec";
-            TxtSec.Size = new Size(46, 22);
+            TxtSec.Size = new Size(58, 26);
             TxtSec.TabIndex = 11;
             TxtSec.Text = "0";
             // 
             // TxtMin
             // 
             TxtMin.Font = new Font("나눔고딕", 9.75F);
-            TxtMin.Location = new Point(237, 48);
+            TxtMin.Location = new Point(305, 64);
+            TxtMin.Margin = new Padding(4);
             TxtMin.Name = "TxtMin";
-            TxtMin.Size = new Size(46, 22);
+            TxtMin.Size = new Size(58, 26);
             TxtMin.TabIndex = 10;
             TxtMin.Text = "0";
             // 
             // TxtHour
             // 
             TxtHour.Font = new Font("나눔고딕", 9.75F);
-            TxtHour.Location = new Point(145, 48);
+            TxtHour.Location = new Point(186, 64);
+            TxtHour.Margin = new Padding(4);
             TxtHour.Name = "TxtHour";
-            TxtHour.Size = new Size(46, 22);
+            TxtHour.Size = new Size(58, 26);
             TxtHour.TabIndex = 9;
             TxtHour.Text = "0";
             // 
             // label9
             // 
             label9.AutoSize = true;
-            label9.Location = new Point(41, 51);
+            label9.Location = new Point(53, 68);
+            label9.Margin = new Padding(4, 0, 4, 0);
             label9.Name = "label9";
-            label9.Size = new Size(76, 17);
+            label9.Size = new Size(94, 21);
             label9.TabIndex = 8;
             label9.Text = "운동시간";
             // 
             // TxtRestTime
             // 
             TxtRestTime.Font = new Font("나눔고딕", 9.75F);
-            TxtRestTime.Location = new Point(180, 149);
+            TxtRestTime.Location = new Point(231, 199);
+            TxtRestTime.Margin = new Padding(4);
             TxtRestTime.Name = "TxtRestTime";
-            TxtRestTime.Size = new Size(100, 22);
+            TxtRestTime.Size = new Size(127, 26);
             TxtRestTime.TabIndex = 7;
             // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(41, 154);
+            label3.Location = new Point(53, 205);
+            label3.Margin = new Padding(4, 0, 4, 0);
             label3.Name = "label3";
-            label3.Size = new Size(116, 17);
+            label3.Size = new Size(141, 21);
             label3.TabIndex = 6;
             label3.Text = "Rest Time";
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(323, 99);
+            label2.Location = new Point(415, 132);
+            label2.Margin = new Padding(4, 0, 4, 0);
             label2.Name = "label2";
-            label2.Size = new Size(48, 17);
+            label2.Size = new Size(57, 21);
             label2.TabIndex = 5;
             label2.Text = "SEC";
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(41, 99);
+            label1.Location = new Point(53, 132);
+            label1.Margin = new Padding(4, 0, 4, 0);
             label1.Name = "label1";
-            label1.Size = new Size(128, 17);
+            label1.Size = new Size(158, 21);
             label1.TabIndex = 2;
             label1.Text = "휴식 시간 설정";
             // 
             // BtnDone
             // 
             BtnDone.Font = new Font("휴먼매직체", 12F, FontStyle.Bold);
-            BtnDone.Location = new Point(145, 209);
+            BtnDone.Location = new Point(186, 279);
+            BtnDone.Margin = new Padding(4);
             BtnDone.Name = "BtnDone";
-            BtnDone.Size = new Size(100, 40);
+            BtnDone.Size = new Size(129, 53);
             BtnDone.TabIndex = 1;
             BtnDone.Text = "DONE";
             BtnDone.UseVisualStyleBackColor = true;
@@ -524,9 +569,10 @@
             // BtnStop
             // 
             BtnStop.Font = new Font("휴먼매직체", 12F, FontStyle.Bold);
-            BtnStop.Location = new Point(260, 209);
+            BtnStop.Location = new Point(334, 279);
+            BtnStop.Margin = new Padding(4);
             BtnStop.Name = "BtnStop";
-            BtnStop.Size = new Size(100, 40);
+            BtnStop.Size = new Size(129, 53);
             BtnStop.TabIndex = 1;
             BtnStop.Text = "STOP";
             BtnStop.UseVisualStyleBackColor = true;
@@ -535,9 +581,10 @@
             // BtnStart
             // 
             BtnStart.Font = new Font("휴먼매직체", 12F, FontStyle.Bold);
-            BtnStart.Location = new Point(28, 209);
+            BtnStart.Location = new Point(36, 279);
+            BtnStart.Margin = new Padding(4);
             BtnStart.Name = "BtnStart";
-            BtnStart.Size = new Size(100, 40);
+            BtnStart.Size = new Size(129, 53);
             BtnStart.TabIndex = 0;
             BtnStart.Text = "START";
             BtnStart.UseVisualStyleBackColor = true;
@@ -554,13 +601,14 @@
             // 
             // Frm_Main
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(9F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ActiveCaptionText;
-            ClientSize = new Size(831, 470);
+            ClientSize = new Size(1068, 627);
             Controls.Add(groupBox2);
             Controls.Add(groupBox1);
             Icon = (Icon)resources.GetObject("$this.Icon");
+            Margin = new Padding(4);
             Name = "Frm_Main";
             Text = "운동 도우미";
             groupBox1.ResumeLayout(false);
