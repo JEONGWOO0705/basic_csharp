@@ -367,6 +367,13 @@
     ![1일차](https://raw.githubusercontent.com/JEONGWOO0705/basic_csharp_2024/main/images/cs006.gif)
 
 - 2일차
+    - 나머지 (등,하체) 운동 구현 완료
     - 세트 수 카운트 
     - 세트 수에 따른 휴식시간 타이머 및 총 운동 시간 타이머
+    - 나머지는 당장 앞둔 시험 치고 마무리하자!!
+
+
+- 특징
+
+- 배운점
 
