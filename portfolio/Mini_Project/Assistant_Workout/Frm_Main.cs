@@ -23,7 +23,7 @@ namespace Assistant_Workout
         }
 
 
-        #region 'Help Function'
+        #region '메서드'
         // 콤보박스 클리어
         private void CboClear()
         {
@@ -220,7 +220,7 @@ namespace Assistant_Workout
             if (Toggle == false)
             {
                 timer1.Start();
-                //// 여기서 부터 다시하기!!!!!!!!!!!!!!!
+                
                 if (second > 0)
                 {
                     timer2.Start();
@@ -307,6 +307,7 @@ namespace Assistant_Workout
             Txtone.Text = (Convert.ToInt32(Txtone.Text) + 1).ToString();
             Chkone.Checked = false; // 체크박스를 다시 선택 해제
             timer2.Start();
+         
 
             }
             catch (Exception )
@@ -404,4 +405,22 @@ namespace Assistant_Workout
  추가로 할 것
 1. Chest, Back, Leg 데이터 베이스로 만들기 및 연결하기
 2. MultiForm을 통해 랜덤 운동, 자신이 원하는 운동 선택할 수 있게 만들기, 자신이 만든 운동 루틴 불러오기 기능
+ */
+
+
+/*
+프로그램 설명
+
+- 운동을 시작한지 얼마 안된 헬린이들을 위한 프로그램
+- 가슴, 등, 하체  버튼을 클릭하면 자동으로 운동 5개가 정해진다
+- 자동으로 정해진 운동이 마음이 안들시 콤보박스를 이용해 자신이 원하는 운동으로 대체 할 수 있다.
+
+- Start 버튼을 누르면 전체 운동 시간을 잴 수 있으며
+- Stop 을 누르면 일시정지 및 재시작을 할 수 있다.
+
+- 휴식시간 설정에 자신이 원하는 세트 수 사이의  시간(ex 180) 을 입력한 후, Set 버튼을 클릭한다.
+- 세트가 끝나면 콤보박스 옆 체크박스를 체크한다. 자동으로 SET 수가 올라가며 
+- 지정한 쉬는 시간이 줄어들게 된다.
+- 쉬는 시간이 끝난다면 알람이 뜬다.
+
  */
