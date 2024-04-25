@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Assistant_Workout", "Assist
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WorkOut", "WorkOut\WorkOut.csproj", "{39A7613E-9AAB-4263-B330-A88E06F7A4DC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assistant_Workout_MultiForm", "Assistant_Workout_MultiForm\Assistant_Workout_MultiForm.csproj", "{014317F4-C08B-4B18-9309-6A6D3AE3E925}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{39A7613E-9AAB-4263-B330-A88E06F7A4DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{39A7613E-9AAB-4263-B330-A88E06F7A4DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{39A7613E-9AAB-4263-B330-A88E06F7A4DC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{014317F4-C08B-4B18-9309-6A6D3AE3E925}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{014317F4-C08B-4B18-9309-6A6D3AE3E925}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{014317F4-C08B-4B18-9309-6A6D3AE3E925}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{014317F4-C08B-4B18-9309-6A6D3AE3E925}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

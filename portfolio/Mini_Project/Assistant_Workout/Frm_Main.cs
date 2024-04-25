@@ -15,7 +15,7 @@ namespace Assistant_Workout
                             "덤벨 스쿼트", "덤벨 루마니안 스쿼트","런지","바벨 런지","덤벨 런지"};
 
         int second;
-        private bool Toggle = false;
+        private static bool Toggle = false;
         #endregion
         public Frm_Main()
         {
@@ -302,13 +302,12 @@ namespace Assistant_Workout
         private void Chkone_Click(object sender, EventArgs e)
         {
             try
-            {
-            ResetTime();
-            Txtone.Text = (Convert.ToInt32(Txtone.Text) + 1).ToString();
-            Chkone.Checked = false; // 체크박스를 다시 선택 해제
-            timer2.Start();
-         
-
+            {           
+                    ResetTime();
+                    Txtone.Text = (Convert.ToInt32(Txtone.Text) + 1).ToString();
+                    Chkone.Checked = false; // 체크박스를 다시 선택 해제
+                    timer2.Start();           
+           
             }
             catch (Exception )
             {
